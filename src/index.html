@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOCALWORKER</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#FFF7ED;
+    }
+
+    .header{
+      background:linear-gradient(#F97316,#EA580C);
+      color:white;
+      padding:30px;
+      border-bottom-left-radius:30px;
+      border-bottom-right-radius:30px;
+    }
+
+    .header h1{
+      margin:0;
+      font-size:40px;
+    }
+
+    .header p{
+      margin-top:8px;
+    }
+
+    .search{
+      margin-top:20px;
+    }
+
+    .search input{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:15px;
+      font-size:16px;
+    }
+
+    .container{
+      padding:15px;
+    }
+
+    .card{
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .content{
+      padding:20px;
+    }
+
+    .name{
+      font-size:28px;
+      font-weight:bold;
+    }
+
+    .job{
+      color:gray;
+      margin-top:5px;
+    }
+
+    .location{
+      margin-top:10px;
+    }
+
+    .rating{
+      margin-top:10px;
+      color:green;
+      font-weight:bold;
+      font-size:20px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:10px;
+      margin-top:20px;
+    }
+
+    button{
+      flex:1;
+      padding:14px;
+      border:none;
+      border-radius:12px;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    .call{
+      background:#2563EB;
+    }
+
+    .whatsapp{
+      background:#16A34A;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>LOCALWORKER</h1>
+    <p>Find Skilled Workers Near You</p>
+
+    <div class="search">
+      <input type="text" placeholder="Search workers">
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+
+        <div class="name">Rahim Tiles</div>
+
+        <div class="job">Tiles Worker</div>
+
+        <div class="location">📍 Hyderabad</div>
+
+        <div class="rating">⭐ 4.8</div>
+
+        <div class="buttons">
+
+          <button class="call">Call</button>
+
+          <button class="whatsapp">WhatsApp</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
