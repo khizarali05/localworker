@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>LOCALWORKER</title>
 
   <style>
@@ -15,8 +19,8 @@
 
     .header{
       background:linear-gradient(#F97316,#EA580C);
-      padding:30px;
       color:white;
+      padding:30px;
       border-bottom-left-radius:30px;
       border-bottom-right-radius:30px;
     }
@@ -115,6 +119,7 @@
     }
 
   </style>
+
 </head>
 
 <body>
@@ -126,7 +131,9 @@
     <p>Find Skilled Workers Near You</p>
 
     <div class="search-box">
+
       <input type="text" placeholder="Search workers">
+
     </div>
 
   </div>
@@ -139,22 +146,38 @@
 
   <script type="module">
 
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { initializeApp }
+
+    from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
     import {
+
       getFirestore,
+
       collection,
+
       getDocs
-    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    }
+
+    from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
     const firebaseConfig = {
+
       apiKey: "AIzaSyBELemQikOIzMb-MyVIAPO31shnX4e9gkg",
+
       authDomain: "workerapp-ed62f.firebaseapp.com",
+
       projectId: "workerapp-ed62f",
+
       storageBucket: "workerapp-ed62f.firebasestorage.app",
+
       messagingSenderId: "287542494952",
+
       appId: "1:287542494952:web:5f44942e9aca55d5362b5d",
+
       measurementId: "G-SEPNPN4YWF"
+
     };
 
     const app = initializeApp(firebaseConfig);
@@ -167,7 +190,7 @@
     async function loadWorkers(){
 
       const querySnapshot =
-        await getDocs(collection(db, "workers"));
+        await getDocs(collection(db, "users"));
 
       querySnapshot.forEach((doc) => {
 
@@ -177,34 +200,46 @@
 
           <div class="card">
 
-            <img src="${worker.image}">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop">
 
             <div class="content">
 
               <div class="name">
-                ${worker.name}
+
+                ${worker.phone}
+
               </div>
 
               <div class="job">
-                ${worker.job}
+
+                Worker
+
               </div>
 
               <div class="location">
-                📍 ${worker.location}
+
+                📍 Hyderabad
+
               </div>
 
               <div class="rating">
-                ⭐ ${worker.rating}
+
+                ⭐ 4.5
+
               </div>
 
               <div class="buttons">
 
                 <button class="call">
+
                   Call
+
                 </button>
 
                 <button class="whatsapp">
+
                   WhatsApp
+
                 </button>
 
               </div>
@@ -226,4 +261,5 @@
   </script>
 
 </body>
+
 </html>
